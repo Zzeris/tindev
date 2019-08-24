@@ -8,7 +8,7 @@ module.exports = {
         const userExists = await Dev.findOne({ user: username });
 
         if (userExists) {
-            return res.json({userExists});
+            return res.json(userExists);
         }
 
         const response = await axios.get(`https://api.github.com/users/${username}`);
@@ -22,7 +22,7 @@ module.exports = {
             avatar
         });
 
-        return res.json({dev});
+        return res.json(dev);
     },
     async index(req, res) {
         const { user } = req.headers;

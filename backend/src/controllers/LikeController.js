@@ -13,7 +13,7 @@ module.exports = {
         }
 
         if (targetDev.likes.includes(loggedDev._id)) {
-            return res.send('DEU MATCH!');
+            console.log('DEU MATCH!');
         }
 
         loggedDev.likes.push(targetDev._id);
